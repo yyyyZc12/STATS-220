@@ -20,4 +20,4 @@ A meme that captures how I currently feel about my university studies is ![](htt
 
 [running](https://th.bing.com/th/id/R.1509b540385487df9cdd652fc2271a32?rik=Zs46WHsw1OIUnQ&riu=http%3a%2f%2fmedia1.giphy.com%2fmedia%2f7kn27lnYSAE9O%2fgiphy.gif&ehk=4EWBE%2fmPMkvobj3GaPn6rMHghgShSczHS23TmivdJFk%3d&risl=&pid=ImgRaw&r=0)
 
-[Mickey Mouse](https://i.imgflip.com/8b3v2a.jpg)
+![Mickey Mouse](https://i.imgflip.com/8b3v2a.jpg)
