@@ -2,13 +2,13 @@
 
 ## Hi
 
-* My feeling about STATS 220:*
+*My feeling about STATS 220:*
 
 1. I am so happy to learn STATS 220.
 
 2. I hope I can get great grade in this course.
 
-* My hobby*
+*My hobby*
 
 * Skiing
 
