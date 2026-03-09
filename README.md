@@ -12,7 +12,7 @@
 
 * Skiing
 
-* Watch films
+* Watching films
 
 * traveling
 
