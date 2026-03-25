@@ -1,0 +1,62 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+body {
+  background-color: #FFC125
+}
+```
+
+## What's going on with this data?
+
+You need to change the contents of this Rmd! Replace the R code and markdown give below in this template document.
+
+
+## Import and edit data
+```{r}
+library(tidyverse)
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vS-wjZ4Bqn0sfBvu85SxmObyrbP8uVlf_POLo_WYHIApdL5CsRH5Zx3zIf6-2kgUi_OAJBk6jUhjGQB/pub?gid=340382318&single=true&output=csv")
+latest_data <- logged_data %>%
+  rename(video_type = 2,
+         find_video = 3,
+         time_video = 4)
+```
+
+## Max time watch video
+```{r}
+max_time <- max(latest_data$time_video);max_time
+
+paste("The longest time watch videos each day is", max_time)
+```
+
+## Average time watch video
+```{r}
+average_time <- mean(latest_data$time_video);average_time
+
+paste("The average time watch videos each day is", average_time)
+```
+
+## Bar plot for dind video
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = find_video, fill = video_type)) +
+  labs(title = "How did you find video?")
+
+```
+
+## Bar plot for watch video time
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = time_video, fill = video_type)) +
+  labs(title = "Watch time")
+
+```
