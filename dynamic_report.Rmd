@@ -12,6 +12,11 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 body {
   background-color: #FFC125
 }
+
+h2 {
+  font-size: 22px;
+  line-height: 1.6
+}
 ```
 
 ## What's going on with this data?
