@@ -1,0 +1,69 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{css}
+body {
+  background-color: #FFC125
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1.6
+}
+```
+
+## What's going on with this data?
+
+As time goes on, we collect more and more data, and when we have enough data, we can start data analysis.
+
+```{r}
+library(tidyverse)
+logged_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vS-wjZ4Bqn0sfBvu85SxmObyrbP8uVlf_POLo_WYHIApdL5CsRH5Zx3zIf6-2kgUi_OAJBk6jUhjGQB/pub?gid=340382318&single=true&output=csv")
+latest_data <- logged_data %>%
+  rename(video_type = 2,
+         find_video = 3,
+         time_video = 4)
+```
+
+## Max time watch video
+```{r}
+max_time <- max(latest_data$time_video)
+
+paste("The longest time watch videos each day is", max_time)
+```
+
+## Average time watch video
+```{r}
+average_time <- mean(latest_data$time_video)
+
+paste("The average time watch videos each day is", average_time)
+```
+
+## Bar plot for video type
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = video_type, fill = video_type)) +
+  labs(x = "Video type", 
+       y = "Number of people",
+       title = "Different people like different type of video")
+
+```
+
+## Bar plot for watch video time
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = time_video)) +
+  labs(x = "hours", 
+       y = "number of people", 
+       title = "Watch time")
+
+```
